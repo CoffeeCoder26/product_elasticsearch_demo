@@ -1,0 +1,199 @@
+@base_url = http://localhost:9090/api/products
+
+### Get all products
+GET {{base_url}}
+
+### Get product by ID
+GET {{base_url}}/{id}
+
+### Delete a product
+DELETE {{base_url}}/{id}
+
+### Create a new product
+POST http://localhost:9090/api/products
+Content-Type: application/json
+
+### Add Product 1
+POST {{base_url}}
+Content-Type: application/json
+
+{
+  "id": "1",
+  "name": "Laptop",
+  "price": 1200.00,
+  "quantity": 10,
+  "description": "High-end gaming laptop",
+  "category": "Electronics",
+  "brand": "BrandX",
+  "color": "Black",
+  "size": "15.6 inches",
+  "image": "http://example.com/laptop.jpg"
+}
+
+### Add Product 2
+POST {{base_url}}
+Content-Type: application/json
+
+{
+  "id": "2",
+  "name": "Smartphone",
+  "price": 800.00,
+  "quantity": 20,
+  "description": "Latest model with 128GB storage",
+  "category": "Electronics",
+  "brand": "BrandY",
+  "color": "Blue",
+  "size": "6.5 inches",
+  "image": "http://example.com/smartphone.jpg"
+}
+
+### Add Product 3
+POST {{base_url}}
+Content-Type: application/json
+
+{
+  "id": "3",
+  "name": "Tablet",
+  "price": 500.00,
+  "quantity": 15,
+  "description": "10-inch tablet with stylus support",
+  "category": "Electronics",
+  "brand": "BrandZ",
+  "color": "Silver",
+  "size": "10 inches",
+  "image": "http://example.com/tablet.jpg"
+}
+
+### Add Product 4
+POST {{base_url}}
+Content-Type: application/json
+
+{
+  "id": "4",
+  "name": "Headphones",
+  "price": 150.00,
+  "quantity": 50,
+  "description": "Noise-cancelling over-ear headphones",
+  "category": "Electronics",
+  "brand": "BrandA",
+  "color": "Black",
+  "size": "One Size",
+  "image": "http://example.com/headphones.jpg"
+}
+
+### Add Product 5
+POST {{base_url}}
+Content-Type: application/json
+
+{
+  "id": "5",
+  "name": "Smartwatch",
+  "price": 300.00,
+  "quantity": 30,
+  "description": "Water-resistant smartwatch with heart rate monitor",
+  "category": "Electronics",
+  "brand": "BrandB",
+  "color": "Black",
+  "size": "42mm",
+  "image": "http://example.com/smartwatch.jpg"
+}
+
+### Add Product 6
+POST {{base_url}}
+Content-Type: application/json
+
+{
+  "id": "6",
+  "name": "Camera",
+  "price": 1000.00,
+  "quantity": 5,
+  "description": "Mirrorless camera with 4K video",
+  "category": "Electronics",
+  "brand": "BrandC",
+  "color": "Black",
+  "size": "One Size",
+  "image": "http://example.com/camera.jpg"
+}
+
+### Add Product 7
+POST {{base_url}}
+Content-Type: application/json
+
+{
+  "id": "7",
+  "name": "Printer",
+  "price": 200.00,
+  "quantity": 25,
+  "description": "Wireless all-in-one printer",
+  "category": "Electronics",
+  "brand": "BrandD",
+  "color": "White",
+  "size": "One Size",
+  "image": "http://example.com/printer.jpg"
+}
+
+### Add Product 8
+POST {{base_url}}
+Content-Type: application/json
+
+{
+  "id": "8",
+  "name": "Monitor",
+  "price": 400.00,
+  "quantity": 12,
+  "description": "27-inch 4K monitor",
+  "category": "Electronics",
+  "brand": "BrandE",
+  "color": "Black",
+  "size": "27 inches",
+  "image": "http://example.com/monitor.jpg"
+}
+
+### Add Product 9
+POST {{base_url}}
+Content-Type: application/json
+
+{
+  "id": "9",
+  "name": "Keyboard",
+  "price": 100.00,
+  "quantity": 40,
+  "description": "Mechanical gaming keyboard",
+  "category": "Electronics",
+  "brand": "BrandF",
+  "color": "RGB",
+  "size": "One Size",
+  "image": "http://example.com/keyboard.jpg"
+}
+
+### Add Product 10
+POST {{base_url}}
+Content-Type: application/json
+
+{
+  "id": "10",
+  "name": "Mouse",
+  "price": 50.00,
+  "quantity": 60,
+  "description": "Wireless ergonomic mouse",
+  "category": "Electronics",
+  "brand": "BrandG",
+  "color": "Black",
+  "size": "One Size",
+  "image": "http://example.com/mouse.jpg"
+}
+
+### Search Products by Name
+GET {{base_url}}/search/name?name=Laptop
+
+### Search Products by Price Range
+GET {{base_url}}/search/price-range?minPrice=500&maxPrice=1500
+
+### Search Products by Brand and Category
+GET {{base_url}}/search/brand-category?brand=BrandB&category=Electronics
+
+### MatchAll Query
+GET {{base_url}}/match-all
+
+### Bool Query: Search for products in the "Electronics" category, with brand "BrandX", price between 500 and 1500, and description not containing "old"
+GET {{base_url}}/search?category=Electronics&brand=BrandX&minPrice=500&maxPrice=1500&excludedDescription=old
